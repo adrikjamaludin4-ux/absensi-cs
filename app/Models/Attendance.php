@@ -19,6 +19,12 @@ class Attendance extends Model
         'accuracy',
         'distance',
         'photo_path',
+        'foto_masuk',
+        'foto_pulang',
+        'lokasi_masuk',
+        'lokasi_pulang',
+        'status_masuk',
+        'status_pulang',
         'status_face',
         'status',
     ];
@@ -26,5 +32,22 @@ class Attendance extends Model
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+
+    /**
+     * URL Foto Masuk
+     */
+    public function getFotoMasukUrlAttribute(): ?string
+    {
+        $path = $this->foto_masuk ?: $this->photo_path;
+        return $path ? asset('storage/' . $path) : null;
+    }
+
+    /**
+     * URL Foto Pulang
+     */
+    public function getFotoPulangUrlAttribute(): ?string
+    {
+        return $this->foto_pulang ? asset('storage/' . $this->foto_pulang) : null;
     }
 }

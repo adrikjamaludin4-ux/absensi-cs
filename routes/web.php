@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminDashboardController;
 use App\Http\Controllers\AttendanceLocationController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -10,9 +11,9 @@ Route::get('/', function () {
 });
 
 // Dashboard Admin
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware('auth')->name('dashboard');
+Route::middleware(['auth', 'role:admin'])->group(function () {
+    Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('dashboard');
+});
 
 // Dashboard Satpam
 Route::middleware(['auth', 'role:satpam'])->group(function () {
@@ -25,22 +26,26 @@ Route::middleware(['auth', 'role:satpam'])->group(function () {
 Route::middleware(['auth', 'role:cs'])->group(function () {
 
     // Dashboard CS
-    Route::get('/dashboard-cs', function () {
-        return view('dashboard-cs');
-    })->name('dashboard.cs');
+    Route::get('/dashboard-cs', [AttendanceLocationController::class, 'dashboardCs'])
+        ->name('dashboard.cs');
 
     // Halaman Absensi CS
-    Route::get('/absensi-cs', function () {
-        return view('absensi-cs');
-    })->name('absensi.cs');
+    Route::get('/absensi-cs', [AttendanceLocationController::class, 'absensiCs'])
+        ->name('absensi.cs');
 
     // Halaman Jadwal Kerja CS
     Route::get('/jadwal-kerja-cs', function () {
         return view('jadwal-kerja-cs');
     })->name('jadwal.kerja.cs');
 
+    // Pengajuan Izin / Sakit / Keperluan Mendesak CS
+    Route::get('/izin-cs', [AttendanceLocationController::class, 'ajukanIzinView'])
+        ->name('izin.cs');
 
-    // Validasi GPS CS
+    Route::post('/izin-cs', [AttendanceLocationController::class, 'ajukanIzinStore'])
+        ->name('izin.cs.store');
+
+    // Validasi GPS CS & Foto Selfie
     Route::post('/cs/check-location', [
         AttendanceLocationController::class,
         'checkLocation'
@@ -64,7 +69,3 @@ Route::middleware('auth')->group(function () {
 
 // Autentikasi
 require __DIR__ . '/auth.php';
-
-
-// Ini Irham
-// hallobosku

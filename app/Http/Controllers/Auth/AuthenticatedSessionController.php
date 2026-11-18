@@ -33,9 +33,6 @@ public function store(LoginRequest $request): RedirectResponse
 
     $role = $request->user()->role;
 
-    if ($role === 'satpam') {
-        return redirect()->route('dashboard.satpam');
-    }
 
     if ($role === 'cs') {
         return redirect()->route('dashboard.cs');
