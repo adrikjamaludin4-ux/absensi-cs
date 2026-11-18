@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 
 <head>
@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Absensi CS | SAMSAT Ponorogo</title>
+    <title>Absensi CS | Presensi Cleaning Service</title>
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
@@ -26,8 +26,8 @@
                         S
                     </div>
                     <div>
-                        <h1 class="font-bold tracking-wide">SAMSAT</h1>
-                        <p class="text-xs text-blue-200">PONOROGO</p>
+                        <h1 class="font-bold tracking-wide">Presensi Cleaning Service</h1>
+                        <p class="text-xs text-blue-200">Presensi Cleaning Service</p>
                     </div>
                 </div>
             </div>
@@ -92,7 +92,7 @@
             <header class="flex items-center justify-between border-b border-slate-200 bg-white px-6 py-4">
                 <div>
                     <h2 class="font-bold text-lg text-blue-950">Absensi Petugas</h2>
-                    <p class="text-xs text-slate-500">Sistem Informasi SAMSAT Ponorogo</p>
+                    <p class="text-xs text-slate-500">Sistem Informasi Presensi Cleaning Service</p>
                 </div>
 
                 <div class="flex items-center gap-4">
@@ -119,7 +119,7 @@
 
                         <div class="bg-blue-900 px-6 py-8 text-white">
                             <p class="text-sm font-medium text-blue-200">
-                                SAMSAT PONOROGO
+                                Presensi Cleaning Service
                             </p>
 
                             <h1 class="mt-2 text-2xl font-bold">
@@ -127,7 +127,7 @@
                             </h1>
 
                             <p class="mt-2 text-sm text-blue-100">
-                                Pastikan Anda berada di area kerja SAMSAT Ponorogo dan wajah terlihat jelas.
+                                Pastikan Anda berada di area kerja Presensi Cleaning Service dan wajah terlihat jelas.
                             </p>
                         </div>
 
@@ -221,7 +221,7 @@
                     </div>
 
                     <p class="mt-5 text-center text-xs text-slate-500">
-                        © 2026 SAMSAT Ponorogo - Sistem Informasi Absensi
+                        © 2026 Presensi Cleaning Service - Sistem Informasi Absensi
                     </p>
 
                 </div>

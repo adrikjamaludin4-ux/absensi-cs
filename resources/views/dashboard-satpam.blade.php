@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Satpam | SAMSAT Ponorogo</title>
+    <title>Dashboard Satpam | Presensi Cleaning Service</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="min-h-screen bg-slate-100 text-slate-800">
@@ -19,8 +19,8 @@
                         S
                     </div>
                     <div>
-                        <h1 class="font-bold tracking-wide">SAMSAT</h1>
-                        <p class="text-xs text-blue-200">PONOROGO</p>
+                        <h1 class="font-bold tracking-wide">Presensi Cleaning Service</h1>
+                        <p class="text-xs text-blue-200">Presensi Cleaning Service</p>
                     </div>
                 </div>
             </div>
@@ -125,7 +125,7 @@
 
                         <p class="mt-3 max-w-xl text-sm leading-6 text-blue-100 md:text-base">
                             Pantau jadwal kerja, lakukan absensi sesuai lokasi,
-                            dan pastikan keamanan lingkungan SAMSAT Ponorogo.
+                            dan pastikan keamanan lingkungan Presensi Cleaning Service.
                         </p>
 
                         <a href="#absensi"
@@ -281,7 +281,7 @@
 
                 <!-- Footer -->
                 <footer class="pb-3 text-center text-xs text-slate-500">
-                    © {{ date('Y') }} SAMSAT Ponorogo · Sistem Informasi Absensi dan Monitoring Petugas
+                    © {{ date('Y') }} Presensi Cleaning Service · Sistem Informasi Absensi dan Monitoring Petugas
                 </footer>
 
             </div>

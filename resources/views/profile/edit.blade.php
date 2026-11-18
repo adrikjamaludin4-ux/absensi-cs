@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil Saya | SAMSAT Ponorogo</title>
+    <title>Profil Saya | Presensi Cleaning Service</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="min-h-screen bg-slate-100 text-slate-800">
@@ -15,7 +15,7 @@
     <aside class="hidden w-64 flex-shrink-0 flex-col bg-blue-900 text-white md:flex">
         <div class="border-b border-blue-800 px-6 py-6">
             <h1 class="text-xl font-extrabold">
-                SAMSAT <span class="text-orange-400">PONOROGO</span>
+                Presensi Cleaning Service
             </h1>
             <p class="mt-1 text-sm text-blue-200">Sistem Absensi Petugas</p>
         </div>
@@ -33,7 +33,7 @@
         </nav>
 
         <div class="border-t border-blue-800 px-6 py-4 text-xs text-blue-200">
-            © 2026 SAMSAT Ponorogo
+            © 2026 Presensi Cleaning Service
         </div>
     </aside>
 

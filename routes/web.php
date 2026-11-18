@@ -21,7 +21,7 @@ Route::middleware(['auth', 'role:satpam'])->group(function () {
     })->name('dashboard.satpam');
 });
 
-// Halaman Customer Service
+// Halaman Cleaning Service
 Route::middleware(['auth', 'role:cs'])->group(function () {
 
     // Dashboard CS

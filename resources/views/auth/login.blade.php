@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login | SAMSAT Ponorogo</title>
+    <title>Login | Presensi Cleaning Service</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
@@ -20,7 +20,7 @@
                     🏢
                 </div>
                 <div>
-                    <h1 class="text-xl font-bold">SAMSAT PONOROGO</h1>
+                    <h1 class="text-xl font-bold">Presensi Cleaning Service</h1>
                     <p class="text-sm text-blue-200">Sistem Informasi Absensi</p>
                 </div>
             </div>
@@ -36,7 +36,7 @@
 
                 <p class="mt-6 max-w-md leading-7 text-blue-100">
                     Kelola kehadiran, jadwal kerja, dan monitoring petugas
-                    Customer Service serta Satpam secara terstruktur dalam satu sistem.
+                    Cleaning Service serta Satpam secara terstruktur dalam satu sistem.
                 </p>
 
                 <div class="mt-8 flex flex-wrap gap-3 text-sm">
@@ -47,7 +47,7 @@
             </div>
 
             <p class="relative z-10 text-sm text-blue-200">
-                © 2026 SAMSAT Ponorogo
+                © 2026 Presensi Cleaning Service
             </p>
         </section>
 
@@ -60,7 +60,7 @@
                         🏢
                     </div>
                     <div>
-                        <h1 class="font-bold text-blue-800">SAMSAT PONOROGO</h1>
+                        <h1 class="font-bold text-blue-800">Presensi Cleaning Service</h1>
                         <p class="text-xs text-slate-500">Sistem Informasi Absensi</p>
                     </div>
                 </div>
@@ -240,7 +240,7 @@
                 </div>
 
                 <p class="mt-8 text-center text-xs text-slate-400">
-                    © 2026 Sistem Absensi dan Monitoring SAMSAT Ponorogo
+                    © 2026 Sistem Absensi dan Monitoring Presensi Cleaning Service
                 </p>
             </div>
         </main>

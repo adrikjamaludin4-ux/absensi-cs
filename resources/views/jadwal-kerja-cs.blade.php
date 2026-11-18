@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jadwal Kerja | SAMSAT Ponorogo</title>
+    <title>Jadwal Kerja | Presensi Cleaning Service</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="bg-slate-100 text-slate-800">
@@ -27,8 +27,8 @@
             </div>
 
             <div>
-                <h1 class="font-bold tracking-wide">SAMSAT</h1>
-                <p class="text-xs text-blue-200">PONOROGO</p>
+                <h1 class="font-bold tracking-wide">Presensi Cleaning Service</h1>
+                <p class="text-xs text-blue-200">Presensi Cleaning Service</p>
             </div>
         </div>
     </div>
@@ -94,7 +94,7 @@
         <header class="bg-white border-b border-slate-200 px-6 py-4 flex justify-between items-center">
             <div>
                 <h2 class="font-bold text-lg">Jadwal Kerja</h2>
-                <p class="text-xs text-slate-500">Sistem Absensi SAMSAT Ponorogo</p>
+                <p class="text-xs text-slate-500">Sistem Absensi Presensi Cleaning Service</p>
             </div>
 
             <div class="flex items-center gap-4">
@@ -221,7 +221,7 @@
                 <p class="font-bold text-orange-800">Perhatian!</p>
                 <p class="text-sm text-orange-700 mt-1">
                     Jadwal di atas merupakan contoh sementara. Pastikan jadwal
-                    kerja sesuai dengan ketentuan resmi SAMSAT Ponorogo.
+                    kerja sesuai dengan ketentuan resmi Presensi Cleaning Service.
                 </p>
             </div>
 

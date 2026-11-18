@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard CS | SAMSAT Ponorogo</title>
+    <title>Dashboard CS | Presensi Cleaning Service</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
@@ -23,8 +23,8 @@
                     </div>
 
                     <div>
-                        <h1 class="font-bold tracking-wide">SAMSAT</h1>
-                        <p class="text-xs text-blue-200">PONOROGO</p>
+                        <h1 class="font-bold tracking-wide">Presensi Cleaning Service</h1>
+                        <p class="text-xs text-blue-200">Presensi Cleaning Service</p>
                     </div>
                 </div>
             </div>
@@ -156,7 +156,7 @@
 
                         <p class="mt-3 max-w-xl text-sm leading-6 text-blue-100 md:text-base">
                             Pantau jadwal kerja, lakukan absensi sesuai lokasi,
-                            dan berikan pelayanan terbaik kepada masyarakat di SAMSAT Ponorogo.
+                            dan berikan pelayanan terbaik kepada masyarakat di Presensi Cleaning Service.
                         </p>
 
                         <a href="{{ route('absensi.cs') }}"
@@ -297,7 +297,7 @@
                         <div class="rounded-2xl border border-slate-200 bg-slate-50 p-5 flex flex-col justify-center">
                             <h4 class="font-bold text-slate-800 mb-1">Ketentuan Absensi:</h4>
                             <ul class="text-xs text-slate-600 space-y-1 list-disc list-inside">
-                                <li>Berada dalam radius maksimal 50 meter dari kantor SAMSAT Ponorogo.</li>
+                                <li>Berada dalam radius maksimal 50 meter dari kantor Presensi Cleaning Service.</li>
                                 <li>Akurasi GPS perangkat memenuhi batas toleransi.</li>
                                 <li>Wajib mengambil foto selfie langsung menggunakan kamera depan.</li>
                             </ul>
@@ -347,7 +347,7 @@
 
                 <!-- FOOTER -->
                 <footer class="pb-3 text-center text-xs text-slate-500">
-                    © {{ date('Y') }} SAMSAT Ponorogo ·
+                    © {{ date('Y') }} Presensi Cleaning Service ·
                     Sistem Informasi Absensi dan Monitoring Petugas
                 </footer>
 

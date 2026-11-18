@@ -10,19 +10,19 @@ class CreateCs extends Command
 {
     protected $signature = 'app:create-cs';
 
-    protected $description = 'Membuat akun Customer Service untuk pengujian';
+    protected $description = 'Membuat akun Cleaning Service untuk pengujian';
 
     public function handle(): int
     {
-        $name = $this->ask('Nama CS');
-        $email = $this->ask('Email CS');
+        $name = $this->ask('Nama Cleaning Service');
+        $email = $this->ask('Email Cleaning Service');
 
         if (User::where('email', $email)->exists()) {
             $this->error('Email tersebut sudah digunakan.');
             return self::FAILURE;
         }
 
-        $password = $this->secret('Password CS');
+        $password = $this->secret('Password Cleaning Service');
 
         if (empty($name) || empty($email) || empty($password)) {
             $this->error('Nama, email, dan password wajib diisi.');
@@ -30,13 +30,13 @@ class CreateCs extends Command
         }
 
         User::create([
-            'name' => $name,
-            'email' => $email,
+            'name'     => $name,
+            'email'    => $email,
             'password' => Hash::make($password),
-            'role' => 'cs',
+            'role'     => 'cs',
         ]);
 
-        $this->info('Akun CS berhasil dibuat.');
+        $this->info('Akun Cleaning Service berhasil dibuat.');
 
         return self::SUCCESS;
     }

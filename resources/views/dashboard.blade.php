@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Admin | SAMSAT Ponorogo</title>
+    <title>Dashboard Admin | Presensi Cleaning Service</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
@@ -17,8 +17,8 @@
                 🏢
             </div>
             <div>
-                <h1 class="text-lg font-bold">SAMSAT</h1>
-                <p class="text-xs text-blue-200">Ponorogo • Monitoring</p>
+                <h1 class="text-lg font-bold">Presensi Cleaning Service</h1>
+                <p class="text-xs text-blue-200">Presensi Cleaning Service • Monitoring</p>
             </div>
         </div>
 
@@ -125,7 +125,7 @@
                     </h3>
                     <p class="mt-3 text-sm leading-6 text-blue-100 md:text-base">
                         Pantau kehadiran, jadwal kerja, dan aktivitas petugas
-                        Cleaning Service serta Satpam SAMSAT Ponorogo dalam satu dashboard.
+                        Cleaning Service serta Satpam Presensi Cleaning Service dalam satu dashboard.
                     </p>
                     <a href="#monitoring"
                        class="mt-5 inline-flex items-center gap-2 rounded-xl bg-orange-500 px-5 py-3 text-sm font-semibold text-white shadow transition hover:bg-orange-600">
@@ -242,7 +242,7 @@
                                 </td>
                                 <td class="px-6 py-4 text-slate-600">Satpam</td>
                                 <td class="px-6 py-4 font-medium">07:45</td>
-                                <td class="px-6 py-4 text-slate-600">Area Samsat</td>
+                                <td class="px-6 py-4 text-slate-600">Area Kantor</td>
                                 <td class="px-6 py-4">
                                     <span class="rounded-full bg-green-100 px-3 py-1.5 text-xs font-semibold text-green-700">Hadir</span>
                                 </td>
@@ -260,7 +260,7 @@
                                 </td>
                                 <td class="px-6 py-4 text-slate-600">Cleaning Service</td>
                                 <td class="px-6 py-4 font-medium">08:12</td>
-                                <td class="px-6 py-4 text-slate-600">Area Samsat</td>
+                                <td class="px-6 py-4 text-slate-600">Area Kantor</td>
                                 <td class="px-6 py-4">
                                     <span class="rounded-full bg-yellow-100 px-3 py-1.5 text-xs font-semibold text-yellow-800">Terlambat</span>
                                 </td>
@@ -316,7 +316,7 @@
             </section>
 
             <footer class="pb-3 text-center text-xs text-slate-400">
-                © 2026 Sistem Absensi dan Monitoring Petugas SAMSAT Ponorogo
+                © 2026 Sistem Absensi dan Monitoring Petugas Presensi Cleaning Service
             </footer>
 
         </main>
