@@ -56,4 +56,14 @@ class User extends Authenticatable
     {
         return $this->hasMany(LeaveRequest::class);
     }
+
+    public function assignedTasks()
+    {
+        return $this->hasMany(Task::class, 'assigned_to');
+    }
+
+    public function taskSubmissions()
+    {
+        return $this->hasMany(TaskSubmission::class);
+    }
 }

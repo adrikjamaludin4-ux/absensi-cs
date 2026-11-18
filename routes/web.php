@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\AdminDashboardController;
+use App\Http\Controllers\AdminTaskController;
 use App\Http\Controllers\AttendanceLocationController;
+use App\Http\Controllers\CsTaskController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -10,9 +12,15 @@ Route::get('/', function () {
     return redirect()->route('login');
 });
 
-// Dashboard Admin
+// Panel Administrator
 Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('dashboard');
+
+    // Manajemen Tugas & Pengecekan Rutin (Admin)
+    Route::get('/admin/tasks', [AdminTaskController::class, 'index'])->name('admin.tasks.index');
+    Route::post('/admin/tasks', [AdminTaskController::class, 'store'])->name('admin.tasks.store');
+    Route::put('/admin/tasks/{task}', [AdminTaskController::class, 'update'])->name('admin.tasks.update');
+    Route::delete('/admin/tasks/{task}', [AdminTaskController::class, 'destroy'])->name('admin.tasks.destroy');
 });
 
 // Dashboard Satpam
@@ -22,7 +30,7 @@ Route::middleware(['auth', 'role:satpam'])->group(function () {
     })->name('dashboard.satpam');
 });
 
-// Halaman Cleaning Service
+// Panel Cleaning Service
 Route::middleware(['auth', 'role:cs'])->group(function () {
 
     // Dashboard CS
@@ -33,10 +41,12 @@ Route::middleware(['auth', 'role:cs'])->group(function () {
     Route::get('/absensi-cs', [AttendanceLocationController::class, 'absensiCs'])
         ->name('absensi.cs');
 
-    // Halaman Jadwal Kerja CS
-    Route::get('/jadwal-kerja-cs', function () {
-        return view('jadwal-kerja-cs');
-    })->name('jadwal.kerja.cs');
+    // Sistem Manajemen Tugas & Jadwal Kerja CS
+    Route::get('/jadwal-kerja-cs', [CsTaskController::class, 'index'])
+        ->name('jadwal.kerja.cs');
+
+    Route::post('/cs/tasks/{task}/submit', [CsTaskController::class, 'submit'])
+        ->name('cs.tasks.submit');
 
     // Pengajuan Izin / Sakit / Keperluan Mendesak CS
     Route::get('/izin-cs', [AttendanceLocationController::class, 'ajukanIzinView'])
