@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
@@ -36,7 +36,7 @@
     <!-- Menu -->
     <div class="px-5 py-6">
         <p class="mb-3 text-xs font-semibold uppercase tracking-wider text-blue-300">
-            Menu Customer Service
+            Menu Cleaning Service
         </p>
 
         <nav class="space-y-2">
@@ -100,7 +100,7 @@
             <div class="flex items-center gap-4">
                 <div class="text-right">
                     <p class="text-sm font-bold">{{ $user->name }}</p>
-                    <p class="text-xs text-slate-500">Customer Service</p>
+                    <p class="text-xs text-slate-500">Cleaning Service</p>
                 </div>
 
                 <form method="POST" action="{{ route('logout') }}">
@@ -122,7 +122,7 @@
                     Jadwal Kerja Saya
                 </h1>
                 <p class="text-slate-500 mt-2">
-                    Lihat informasi hari dan jam kerja Customer Service.
+                    Lihat informasi hari dan jam kerja Cleaning Service.
                 </p>
             </div>
 
@@ -161,7 +161,7 @@
                 <div class="p-6 border-b border-slate-200">
                     <h2 class="text-lg font-bold text-blue-950">Rincian Jadwal Mingguan</h2>
                     <p class="text-sm text-slate-500 mt-1">
-                        Informasi jadwal kerja petugas Customer Service.
+                        Informasi jadwal kerja petugas Cleaning Service.
                     </p>
                 </div>
 

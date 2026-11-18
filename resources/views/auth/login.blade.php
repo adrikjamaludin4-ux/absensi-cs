@@ -71,7 +71,7 @@
                     </div>
                     <h2 class="text-3xl font-bold tracking-tight">Selamat Datang!</h2>
                     <p class="mt-2 text-sm leading-6 text-slate-500">
-                        Silakan masuk menggunakan nama, sandi, dan peran akun Anda.
+                        Silakan masuk menggunakan nama pengguna dan sandi akun Anda.
                     </p>
                 </div>
 

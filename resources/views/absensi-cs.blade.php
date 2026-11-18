@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="id">
 
 <head>
@@ -35,7 +35,7 @@
             <!-- Menu -->
             <div class="px-5 py-6">
                 <p class="mb-3 text-xs font-semibold uppercase tracking-wider text-blue-300">
-                    Menu Customer Service
+                    Menu Cleaning Service
                 </p>
 
                 <nav class="space-y-2">
@@ -98,7 +98,7 @@
                 <div class="flex items-center gap-4">
                     <div class="text-right">
                         <p class="text-sm font-bold">{{ Auth::user()->name }}</p>
-                        <p class="text-xs text-slate-500">Customer Service</p>
+                        <p class="text-xs text-slate-500">Cleaning Service</p>
                     </div>
 
                     <form method="POST" action="{{ route('logout') }}">
@@ -135,7 +135,7 @@
 
                             <div class="rounded-2xl bg-blue-50 p-5">
                                 <p class="text-sm font-semibold text-blue-900">
-                                    Petugas Customer Service
+                                    Petugas Cleaning Service
                                 </p>
 
                                 <p class="mt-1 text-lg font-bold">

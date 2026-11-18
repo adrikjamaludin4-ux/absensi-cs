@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="id">
 
 <head>
@@ -32,7 +32,7 @@
             <!-- Menu -->
             <div class="px-5 py-6">
                 <p class="mb-3 text-xs font-semibold uppercase tracking-wider text-blue-300">
-                    Menu Customer Service
+                    Menu Cleaning Service
                 </p>
 
                 <nav class="space-y-2">
@@ -96,7 +96,7 @@
                     </p>
 
                     <h2 class="mt-1 text-xl font-bold text-blue-950 md:text-2xl">
-                        Dashboard Customer Service
+                        Dashboard Cleaning Service
                     </h2>
                 </div>
 
@@ -112,7 +112,7 @@
                             </p>
 
                             <p class="text-xs text-slate-500">
-                                Customer Service
+                                Cleaning Service
                             </p>
                         </div>
 
@@ -147,7 +147,7 @@
 
                         <span
                             class="inline-flex rounded-full bg-white/15 px-3 py-1 text-xs font-semibold text-orange-200">
-                            AREA CUSTOMER SERVICE
+                            AREA Cleaning Service
                         </span>
 
                         <h3 class="mt-4 text-2xl font-bold md:text-3xl">
@@ -315,7 +315,7 @@
                     </h3>
 
                     <p class="mt-1 text-sm text-slate-500">
-                        Ringkasan kehadiran Customer Service.
+                        Ringkasan kehadiran Cleaning Service.
                     </p>
 
                     <div class="mt-5 overflow-x-auto">

@@ -16,9 +16,9 @@ class DatabaseSeeder extends Seeder
     {
         // Administrator
         User::updateOrCreate(
-            ['name' => 'Administrator'],
+            ['email' => 'admin@samsat.local'],
             [
-                'email'    => 'admin@samsat.local',
+                'name'     => 'admin',
                 'password' => Hash::make('admin123'),
                 'role'     => 'admin',
             ]
@@ -26,9 +26,9 @@ class DatabaseSeeder extends Seeder
 
         // Cleaning Service
         User::updateOrCreate(
-            ['name' => 'Cleaning Service'],
+            ['email' => 'cs@samsat.local'],
             [
-                'email'    => 'cs@samsat.local',
+                'name'     => 'cleaning',
                 'password' => Hash::make('cs123'),
                 'role'     => 'cs',
             ]

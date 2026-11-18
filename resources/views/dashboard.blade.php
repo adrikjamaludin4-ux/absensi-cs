@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
@@ -125,7 +125,7 @@
                     </h3>
                     <p class="mt-3 text-sm leading-6 text-blue-100 md:text-base">
                         Pantau kehadiran, jadwal kerja, dan aktivitas petugas
-                        Customer Service serta Satpam SAMSAT Ponorogo dalam satu dashboard.
+                        Cleaning Service serta Satpam SAMSAT Ponorogo dalam satu dashboard.
                     </p>
                     <a href="#monitoring"
                        class="mt-5 inline-flex items-center gap-2 rounded-xl bg-orange-500 px-5 py-3 text-sm font-semibold text-white shadow transition hover:bg-orange-600">
@@ -258,7 +258,7 @@
                                         </div>
                                     </div>
                                 </td>
-                                <td class="px-6 py-4 text-slate-600">Customer Service</td>
+                                <td class="px-6 py-4 text-slate-600">Cleaning Service</td>
                                 <td class="px-6 py-4 font-medium">08:12</td>
                                 <td class="px-6 py-4 text-slate-600">Area Samsat</td>
                                 <td class="px-6 py-4">
