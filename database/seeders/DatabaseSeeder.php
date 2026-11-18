@@ -38,7 +38,7 @@ class DatabaseSeeder extends Seeder
         $cs = User::updateOrCreate(
             ['email' => 'cs@cs.local'],
             [
-                'name'     => 'Petugas Cleaning Service',
+                'name'     => 'cleaning',
                 'password' => Hash::make('cs123'),
                 'role'     => 'cs',
             ]
@@ -47,7 +47,7 @@ class DatabaseSeeder extends Seeder
         User::updateOrCreate(
             ['email' => 'cs@samsat.local'],
             [
-                'name'     => 'Petugas Cleaning Service',
+                'name'     => 'cleaning',
                 'password' => Hash::make('cs123'),
                 'role'     => 'cs',
             ]

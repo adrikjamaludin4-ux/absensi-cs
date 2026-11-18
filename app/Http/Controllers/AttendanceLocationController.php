@@ -19,17 +19,7 @@ class AttendanceLocationController extends Controller
         $user = auth()->user();
         $timeStatus = $locationService->getTimeStatusForUser($user->id);
 
-        $history = Attendance::where('user_id', $user->id)
-            ->orderBy('date', 'desc')
-            ->take(10)
-            ->get();
-
-        $leaveRequests = LeaveRequest::where('user_id', $user->id)
-            ->orderBy('date', 'desc')
-            ->take(5)
-            ->get();
-
-        return view('dashboard-cs', compact('timeStatus', 'history', 'leaveRequests'));
+        return view('dashboard-cs', compact('timeStatus'));
     }
 
     /**

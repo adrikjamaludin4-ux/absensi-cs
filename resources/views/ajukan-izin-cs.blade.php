@@ -55,9 +55,10 @@
                         <span>▤</span> Jadwal Kerja
                     </a>
 
-                    <a href="{{ route('dashboard.cs') }}#riwayat"
+                    <a href="{{ route('riwayat.absensi.cs') }}"
                         class="flex items-center gap-3 rounded-xl px-4 py-3 text-blue-100 transition hover:bg-blue-900">
-                        <span>▤</span> Riwayat Absensi
+                        <span>&#128197;</span>
+                        Riwayat Absensi
                     </a>
 
                     <a href="{{ route('profile.edit') }}"

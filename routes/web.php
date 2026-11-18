@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminDashboardController;
 use App\Http\Controllers\AdminTaskController;
 use App\Http\Controllers\AttendanceLocationController;
 use App\Http\Controllers\CsTaskController;
+use App\Http\Controllers\CsRiwayatController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -47,6 +48,10 @@ Route::middleware(['auth', 'role:cs'])->group(function () {
 
     Route::post('/cs/tasks/{task}/submit', [CsTaskController::class, 'submit'])
         ->name('cs.tasks.submit');
+
+    // Riwayat Presensi CS (halaman terpisah)
+    Route::get('/riwayat-absensi-cs', [CsRiwayatController::class, 'index'])
+        ->name('riwayat.absensi.cs');
 
     // Pengajuan Izin / Sakit / Keperluan Mendesak CS
     Route::get('/izin-cs', [AttendanceLocationController::class, 'ajukanIzinView'])

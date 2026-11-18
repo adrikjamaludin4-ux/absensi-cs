@@ -55,9 +55,9 @@
                         <span>▤</span> Jadwal Kerja
                     </a>
 
-                    <a href="#riwayat"
+                    <a href="{{ route('riwayat.absensi.cs') }}"
                         class="flex items-center gap-3 rounded-xl px-4 py-3 text-blue-100 transition hover:bg-blue-900">
-                        <span>▤</span> Riwayat Absensi
+                        <span>&#128197;</span> Riwayat Absensi
                     </a>
 
                     <a href="{{ route('profile.edit') }}"
@@ -358,69 +358,16 @@
                     </div>
                 </section>
 
-                <!-- RIWAYAT ABSENSI PRIBADI -->
-                <section id="riwayat" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-                    <div class="flex items-center justify-between">
-                        <div>
-                            <h3 class="text-lg font-bold text-blue-950">Riwayat Kehadiran Anda</h3>
-                            <p class="mt-1 text-sm text-slate-500">Catatan 10 hari terakhir presensi Cleaning Service.</p>
-                        </div>
+                <!-- LINK CEPAT KE RIWAYAT ABSENSI -->
+                <section class="rounded-2xl border border-blue-100 bg-blue-50 p-5 flex items-center justify-between gap-4 shadow-sm">
+                    <div>
+                        <h3 class="font-bold text-blue-950">📅 Riwayat Presensi Anda</h3>
+                        <p class="mt-1 text-sm text-slate-500">Lihat seluruh catatan kehadiran, filter per bulan, dan preview foto selfie.</p>
                     </div>
-
-                    <div class="mt-5 overflow-x-auto">
-                        <table class="w-full min-w-[550px] text-left text-sm">
-                            <thead>
-                                <tr class="border-b border-slate-200 bg-slate-50 text-slate-600">
-                                    <th class="px-4 py-3 font-semibold">Tanggal</th>
-                                    <th class="px-4 py-3 font-semibold">Jam Masuk</th>
-                                    <th class="px-4 py-3 font-semibold">Jam Pulang</th>
-                                    <th class="px-4 py-3 font-semibold">Foto Selfie</th>
-                                    <th class="px-4 py-3 font-semibold">Status</th>
-                                </tr>
-                            </thead>
-                            <tbody class="divide-y divide-slate-100">
-                                @forelse ($history as $row)
-                                    <tr class="hover:bg-slate-50">
-                                        <td class="px-4 py-3.5 font-medium text-slate-800">
-                                            {{ \Carbon\Carbon::parse($row->date)->translatedFormat('d F Y') }}
-                                        </td>
-                                        <td class="px-4 py-3.5 text-emerald-700 font-semibold">
-                                            {{ $row->clock_in ? substr($row->clock_in, 0, 5) . ' WIB' : '-' }}
-                                        </td>
-                                        <td class="px-4 py-3.5 text-blue-700 font-semibold">
-                                            {{ $row->clock_out ? substr($row->clock_out, 0, 5) . ' WIB' : '-' }}
-                                        </td>
-                                        <td class="px-4 py-3.5">
-                                            <div class="flex gap-2">
-                                                @if ($row->foto_masuk_url)
-                                                    <a href="{{ $row->foto_masuk_url }}" target="_blank" class="rounded-lg bg-emerald-50 px-2 py-1 text-xs font-semibold text-emerald-700 hover:bg-emerald-100">
-                                                        Masuk ↗
-                                                    </a>
-                                                @endif
-                                                @if ($row->foto_pulang_url)
-                                                    <a href="{{ $row->foto_pulang_url }}" target="_blank" class="rounded-lg bg-blue-50 px-2 py-1 text-xs font-semibold text-blue-700 hover:bg-blue-100">
-                                                        Pulang ↗
-                                                    </a>
-                                                @endif
-                                            </div>
-                                        </td>
-                                        <td class="px-4 py-3.5">
-                                            <span class="rounded-full px-3 py-1 text-xs font-semibold
-                                                {{ in_array($row->status_masuk, ['Izin', 'Sakit', 'Keperluan Mendesak']) ? 'bg-purple-100 text-purple-800' : 'bg-emerald-100 text-emerald-800' }}">
-                                                {{ $row->status_masuk ?? $row->status }}
-                                            </span>
-                                        </td>
-                                    </tr>
-                                @empty
-                                    <tr>
-                                        <td colspan="5" class="px-4 py-8 text-center text-slate-500">
-                                            Belum ada riwayat absensi yang tercatat.
-                                        </td>
-                                    </tr>
-                                @endforelse
-                            </tbody>
-                        </table>
-                    </div>
+                    <a href="{{ route('riwayat.absensi.cs') }}"
+                       class="shrink-0 rounded-xl bg-blue-900 px-5 py-2.5 text-sm font-bold text-white shadow transition hover:bg-blue-950">
+                        Lihat Riwayat →
+                    </a>
                 </section>
 
                 <!-- FOOTER -->
