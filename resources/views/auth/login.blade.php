@@ -81,25 +81,55 @@
                     </div>
                 @endif
 
+                {{-- TAB SWITCHER --}}
+                @php
+                    $activeTab = old('role', 'cs') === 'admin' ? 'admin' : 'cs';
+                @endphp
+
+                <div class="mb-6">
+                    <div class="flex rounded-xl border border-slate-200 bg-slate-100 p-1">
+                        <button
+                            type="button"
+                            id="tab-cs"
+                            onclick="switchTab('cs')"
+                            class="tab-btn flex-1 rounded-lg py-2.5 text-sm font-semibold transition-all duration-200
+                                {{ $activeTab === 'cs' ? 'bg-white text-blue-700 shadow-sm' : 'text-slate-500 hover:text-slate-700' }}"
+                        >
+                            🧹 Cleaning Service
+                        </button>
+                        <button
+                            type="button"
+                            id="tab-admin"
+                            onclick="switchTab('admin')"
+                            class="tab-btn flex-1 rounded-lg py-2.5 text-sm font-semibold transition-all duration-200
+                                {{ $activeTab === 'admin' ? 'bg-white text-blue-700 shadow-sm' : 'text-slate-500 hover:text-slate-700' }}"
+                        >
+                            🛡️ Administrator
+                        </button>
+                    </div>
+                </div>
+
+                {{-- TAB BADGE INFO --}}
+                <div id="badge-cs" class="{{ $activeTab === 'cs' ? '' : 'hidden' }} mb-5 flex items-center gap-2 rounded-xl bg-blue-50 border border-blue-100 px-4 py-3">
+                    <span class="text-lg">🧹</span>
+                    <div>
+                        <p class="text-xs font-semibold text-blue-800">Login sebagai Cleaning Service</p>
+                        <p class="text-xs text-blue-500">Akses absensi dan jadwal kebersihan</p>
+                    </div>
+                </div>
+                <div id="badge-admin" class="{{ $activeTab === 'admin' ? '' : 'hidden' }} mb-5 flex items-center gap-2 rounded-xl bg-orange-50 border border-orange-100 px-4 py-3">
+                    <span class="text-lg">🛡️</span>
+                    <div>
+                        <p class="text-xs font-semibold text-orange-800">Login sebagai Administrator</p>
+                        <p class="text-xs text-orange-500">Akses penuh ke seluruh sistem manajemen</p>
+                    </div>
+                </div>
+
                 <form method="POST" action="{{ route('login') }}" class="space-y-5">
                     @csrf
 
-                    <div>
-                        <label for="role" class="mb-2 block text-sm font-semibold">
-                            Login Sebagai
-                        </label>
-                        <select
-                            id="role"
-                            name="role"
-                            required
-                            class="w-full rounded-xl border border-slate-200 bg-white px-4 py-3.5 text-sm outline-none transition focus:border-blue-600 focus:ring-4 focus:ring-blue-100"
-                        >
-                            <option value="">Pilih peran akun</option>
-                            <option value="admin" {{ old('role') == 'admin' ? 'selected' : '' }}>Administrator</option>
-                            <option value="satpam" {{ old('role') == 'satpam' ? 'selected' : '' }}>Satpam</option>
-                            <option value="cs" {{ old('role') == 'cs' ? 'selected' : '' }}>Customer Service (CS)</option>
-                        </select>
-                    </div>
+                    {{-- Hidden role input, diisi oleh JS tab --}}
+                    <input type="hidden" id="role-input" name="role" value="{{ old('role', 'cs') }}">
 
                     <div>
                         <label for="name" class="mb-2 block text-sm font-semibold">
@@ -135,13 +165,72 @@
                         >
                     </div>
 
+                    {{-- 2 tombol statis (Tailwind butuh class hadir di HTML saat build) --}}
                     <button
                         type="submit"
+                        id="btn-cs"
                         class="w-full rounded-xl bg-blue-700 px-5 py-3.5 font-semibold text-white shadow-lg shadow-blue-700/20 transition hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-200"
                     >
                         Masuk ke Sistem <span class="ml-1">→</span>
                     </button>
+                    <button
+                        type="submit"
+                        id="btn-admin"
+                        class="hidden w-full rounded-xl bg-orange-600 px-5 py-3.5 font-semibold text-white shadow-lg shadow-orange-600/20 transition hover:bg-orange-700 focus:outline-none focus:ring-4 focus:ring-orange-200"
+                    >
+                        Masuk ke Sistem <span class="ml-1">→</span>
+                    </button>
                 </form>
+
+                <script>
+                    function switchTab(tab) {
+                        const roleInput  = document.getElementById('role-input');
+                        const tabCs      = document.getElementById('tab-cs');
+                        const tabAdmin   = document.getElementById('tab-admin');
+                        const badgeCs    = document.getElementById('badge-cs');
+                        const badgeAdmin = document.getElementById('badge-admin');
+                        const btnCs      = document.getElementById('btn-cs');
+                        const btnAdmin   = document.getElementById('btn-admin');
+
+                        const activeClass   = ['bg-white', 'text-blue-700', 'shadow-sm'];
+                        const inactiveClass = ['text-slate-500', 'hover:text-slate-700'];
+
+                        if (tab === 'cs') {
+                            roleInput.value = 'cs';
+                            // Tab CS aktif
+                            tabCs.classList.add(...activeClass);
+                            tabCs.classList.remove(...inactiveClass);
+                            // Tab Admin non-aktif
+                            tabAdmin.classList.remove(...activeClass);
+                            tabAdmin.classList.add(...inactiveClass);
+                            // Badge
+                            badgeCs.classList.remove('hidden');
+                            badgeAdmin.classList.add('hidden');
+                            // Tombol
+                            btnCs.classList.remove('hidden');
+                            btnAdmin.classList.add('hidden');
+                        } else {
+                            roleInput.value = 'admin';
+                            // Tab Admin aktif
+                            tabAdmin.classList.add(...activeClass);
+                            tabAdmin.classList.remove(...inactiveClass);
+                            // Tab CS non-aktif
+                            tabCs.classList.remove(...activeClass);
+                            tabCs.classList.add(...inactiveClass);
+                            // Badge
+                            badgeAdmin.classList.remove('hidden');
+                            badgeCs.classList.add('hidden');
+                            // Tombol
+                            btnAdmin.classList.remove('hidden');
+                            btnCs.classList.add('hidden');
+                        }
+                    }
+
+                    // Inisialisasi saat halaman load
+                    document.addEventListener('DOMContentLoaded', function () {
+                        switchTab('{{ $activeTab }}');
+                    });
+                </script>
 
                 <div class="mt-6 rounded-xl border border-yellow-200 bg-yellow-50 p-4">
                     <p class="text-sm font-semibold text-yellow-900">Informasi keamanan</p>
